@@ -17,20 +17,28 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <h1 className="main-title">Get <span className="title-highlight">insights</span> that help your business grow.</h1>
-      <Paragraph content="Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-      experience, and overall efficiency." />
-      
-      <div className="stats">
-        10k+ companies
-        314 templates
-        12m+ queries
+      <div className='component sgs-flex'>
+        <div className="image-container">
+          <ImageComponent class="sgs-fit-container-width header-image" src="images/image-header-mobile.jpg" altName="header-image" />
+          <div class="overlay"></div>
+        </div>
+        
+        <h1 className="main-title">Get <span className="title-highlight">insights</span> that help your business grow.</h1>
+        <Paragraph content="Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+        experience, and overall efficiency." />
+        
+        <div className="stats">
+          10k+ companies
+          314 templates
+          12m+ queries
+        </div>
+        
+        
       </div>
-      
       <div className="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="https://github.com/Argetlahm" target="_blank">Stephen</a>.
-      </div>
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>. 
+          Coded by <a href="https://github.com/Argetlahm" rel="noreferrer" target="_blank">Stephen</a>
+        </div>
     </div>
   );
 }
@@ -41,6 +49,10 @@ function MainTitle (props) {
 
 function Paragraph (props) {
   return <p>{props.content}</p>
+}
+
+function ImageComponent (props) {
+  return <img className={props.class} src={props.src} alt={props.altName} />
 }
 
 export default App;
