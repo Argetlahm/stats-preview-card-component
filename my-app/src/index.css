@@ -1,5 +1,13 @@
+/* font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+font command */
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+  --rad: 10px;
+}
 
 body {
   /* margin: 0;
@@ -10,12 +18,13 @@ body {
   -moz-osx-font-smoothing: grayscale; */
   background-color: hsl(233, 47%, 7%);
   color: hsl(0, 0%, 100%);
+  font-family: 'Lexend Deca', sans-serif;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
 .sgs-flex {
   display: flex;
@@ -26,6 +35,8 @@ code {
   background-color: hsl(244, 38%, 16%);
   flex-direction: column;
   margin: auto;
+  border-radius: var(--rad);
+  height: 100vh;
 }
 
 .sgs-fit-container-width {
@@ -45,8 +56,32 @@ code {
   top: 0;
   bottom: 0;
   background-color: hsla(277, 64%, 61%, 70%);
+  border-top-left-radius: var(--rad);
+  border-top-right-radius: var(--rad);
 }
 
 .header-image {
+  border-top-left-radius: var(--rad);
+  border-top-right-radius: var(--rad);
   filter: contrast(200%);
+}
+
+.main-title {
+  font-family: 'Inter', sans-serif;
+  width: 90%;
+  margin: 35px auto 0 auto;
+}
+
+.title-highlight {
+  color: hsl(277, 64%, 61%);
+}
+
+.main-desc {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 15px;
+  margin: 20px 25px;
+}
+
+.stats {
+  flex-direction: column;
 }

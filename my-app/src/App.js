@@ -24,13 +24,19 @@ function App() {
         </div>
         
         <h1 className="main-title">Get <span className="title-highlight">insights</span> that help your business grow.</h1>
-        <Paragraph content="Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+        <Paragraph class="main-desc" content="Discover the benefits of data analytics and make better decisions regarding revenue, customer 
         experience, and overall efficiency." />
         
-        <div className="stats">
-          10k+ companies
-          314 templates
-          12m+ queries
+        <div className="stats sgs-flex">
+          <div className="stats-item">
+            <div className="">10k+</div>companies
+          </div>
+          <div className="stats-item">
+            <div>314</div>templates
+          </div>
+          <div className="stats-item">
+            <div>12m+</div>queries
+          </div>
         </div>
         
         
@@ -48,7 +54,7 @@ function MainTitle (props) {
 }
 
 function Paragraph (props) {
-  return <p>{props.content}</p>
+  return <p className={props.class}>{props.content}</p>
 }
 
 function ImageComponent (props) {
