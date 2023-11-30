@@ -52,10 +52,6 @@ function App() {
   );
 }
 
-function MainTitle (props) {
-  return <h1>{props.title}</h1>
-}
-
 function Paragraph (props) {
   return <p className={props.class}>{props.content}</p>
 }
@@ -67,6 +63,7 @@ function ImageComponent (props) {
 const obj = document.getElementsByClassName("header-image")
 window.addEventListener("resize", detectWindowSize)
 
+// merubah gambar header sesuai dimensi layar
 function detectWindowSize() {
   if (window.innerWidth > 1000) {
     obj[0].setAttribute("src", "images/image-header-desktop.jpg")
